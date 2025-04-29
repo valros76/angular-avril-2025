@@ -1,0 +1,47 @@
+.web-snap-card{
+  width:35dvw;
+}
+
+.like-cta {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+  background-color: #fff;
+  color: #97900f;
+  border: unset;
+  outline: 1px solid #97900f;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+transition: outline .125s ease-out, background-color .125s ease-out, color .125s ease-out;
+ 	 &:hover {
+   		 outline: 3px solid #97900f;
+  	}
+ 	 &:active {
+    		background-color: #97900f;
+    		color: #efe861;
+    		outline: unset;
+  	}
+}
+
+.like-cta-active {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+  border: unset;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  background-color: #97900f;
+  color: #efe861;
+  outline: unset;
+  transition:outline .125s ease-out, background-color .125s ease-out, color .125s ease-out;
+  &:hover{
+    background-color: #6f6c39;
+  }
+  &:active{
+    background-color: #5e5d4a;
+  }
+}

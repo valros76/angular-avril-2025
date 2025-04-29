@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:system-ui,sans-serif;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+  object-fit:cover;
+}

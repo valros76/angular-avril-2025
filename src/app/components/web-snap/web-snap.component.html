@@ -1,0 +1,22 @@
+<article class="web-snap-card">
+  <h2>
+    {{websnap?.title ?? title}}
+  </h2>
+
+  <img [src]="websnap?.image ?? image" [alt]="websnap?.title ?? title" />
+  <p>
+    <small>Créé le : {{websnap?.createdDate ?? createdDate | date:"dd/MM/YYYY"}}</small>
+  </p>
+  <p>
+    {{websnap?.description ?? description}}
+  </p>
+  <button 
+    (click)="onToggleLikes()" 
+    [class]="{
+      'like-cta': !isLiked(),
+      'like-cta-active': isLiked()
+    }"
+  >
+    {{likes() | number:"1.0-0"}} 👍🏻
+  </button>
+</article>
