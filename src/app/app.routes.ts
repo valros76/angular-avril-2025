@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { WebSnapListComponent } from './components/web-snap-list/web-snap-list.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 const appTitle = "WebSnapApp";
 
@@ -7,7 +8,7 @@ export const routes: Routes = [
   {
     path: "",
     title: `Accueil - ${appTitle}`,
-    loadComponent: () => WebSnapListComponent
+    loadComponent: () => LandingPageComponent
   },
   {
     path:"websnaps",
@@ -22,7 +23,7 @@ export const routes: Routes = [
     ]
   },
   {
-    path:"error/404",
+    path:"erreur/404",
     title: `Erreur 404 - ${appTitle}`,
     loadComponent: () => WebSnapListComponent
   },
