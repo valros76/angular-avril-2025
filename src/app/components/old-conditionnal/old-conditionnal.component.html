@@ -1,0 +1,57 @@
+<section>
+  <h2>
+    Nouvelle structure
+  </h2>
+  <p>
+    Aujourd'hui, pour gérer un affichage conditionnel, avec angular, on utilisera les directives
+    <strong>{{"@if"}}</strong>, <strong>{{"@elseif"}}</strong> et <strong>{{"@strong"}}</strong>.
+  </p>
+  <p>
+    Pour me tester, sélectionnez un des boutons suivants, sur les conditions {{`(>0 && <42)`}} / {{`(42 <=> 54)`}} /
+      {{"AUTRE"}}.
+  </p>
+  <button (click)="onChangeInput(14)">
+    {{`(>0 && <42)`}} </button>
+      <button (click)="onChangeInput(42)">
+        {{`(42 <=> 54)`}}
+      </button>
+      <button (click)="onChangeInput(-12)">
+        {{"AUTRE"}}
+      </button>
+      @if(ifStateTestor){
+      @if(ifStateTestor > 0 && ifStateTestor < 42){ <p>
+        Je m'affiche uniquement quand la valeur de la propriété est supérieure à 0 et inférieure à 42.
+        </p>
+        }
+        @else if(ifStateTestor >= 42 && ifStateTestor <= 54){ <p>
+          Je m'affiche uniquement quand la valeur de la propriété est comprise entre 42 et 54.
+          </p>
+          }
+          @else{
+          <p>
+            Je m'affiche uniquement lorsque la valeur est inférieure à 0 ou supérieure à 54.
+          </p>
+          }
+          }
+</section>
+
+<section>
+  <h2>
+    Ancienne méthode
+  </h2>
+  <p>
+    Avant, on utilisait la directive <strong>{{`*ngIf`}}</strong>, qui s'ajoutait en paramètre aux balises HTML (qui
+    aujourd'hui, requiert également l'importation du CommonModule).
+  </p>
+  @if(ifStateTestor){
+  <p *ngIf="ifStateTestor > 0 && ifStateTestor < 42">
+    Je m'affiche uniquement quand la valeur de la propriété est supérieure à 0 et inférieure à 42.
+  </p>
+  <p *ngIf="ifStateTestor >= 42 && ifStateTestor <= 54">
+    Je m'affiche uniquement quand la valeur de la propriété est comprise entre 42 et 54.
+  </p>
+  <p *ngIf="ifStateTestor < 0 || ifStateTestor > 54">
+    Je m'affiche uniquement lorsque la valeur est inférieure à 0 ou supérieure à 54.
+  </p>
+  }
+</section>
