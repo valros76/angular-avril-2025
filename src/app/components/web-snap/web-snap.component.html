@@ -12,13 +12,13 @@
       {{websnap.description}}
     </p>
     <button 
-      (click)="onToggleLikes()" 
+      (click)="websnap.id && webSnapsService.onLikeWebsnapByID(websnap.id)" 
       [ngClass]="{
-        'like-cta': !isLiked(),
-        'like-cta-active': isLiked()
+        'like-cta': !websnap.isLiked,
+        'like-cta-active': websnap.isLiked
       }"
     >
-      {{likes() | number:"1.0-0"}} 👍🏻
+      {{websnap.likes | number:"1.0-0"}} 👍🏻
     </button>
   </article>
 }

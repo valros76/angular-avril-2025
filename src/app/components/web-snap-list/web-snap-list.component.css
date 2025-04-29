@@ -1,0 +1,9 @@
+.grid{
+  width:calc(100% - .75rem);
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(35dvw, 1fr));
+  grid-auto-rows:1fr;
+  grid-auto-flow:row dense;
+  place-items:center;
+  margin-inline:auto;
+}
