@@ -1,6 +1,5 @@
 <section class="grid">
   @for(actualWebSnap of webSnapsDatalist; track idx; let idx = $index){
-    <app-web-snap [websnap]="actualWebSnap"></app-web-snap>
+    <app-web-snap-details [websnap]="actualWebSnap"></app-web-snap-details>
   }
-  <app-web-snap></app-web-snap>
 </section>

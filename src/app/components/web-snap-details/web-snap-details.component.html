@@ -1,0 +1,13 @@
+<article class="web-snap-card">
+  <h2>
+    {{websnap.title | uppercase}}
+  </h2>
+  <p>
+    <small>Créé le : {{websnap.createdDate | date:"dd/MM/YYYY"}}</small>
+  </p>
+  @if(websnap.id){
+    <button (click)="onShowWebsnap(websnap.id)">
+      Voir le websnap
+    </button>
+  }
+</article>
