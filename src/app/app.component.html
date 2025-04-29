@@ -1,8 +1,7 @@
-
-<app-old-conditionnal></app-old-conditionnal>
 <section class="grid">
-  @for(actualWebSnap of webSnapsDatalist; track actualWebSnap.title){
+  @for(actualWebSnap of webSnapsDatalist; track idx; let idx = $index){
     <app-web-snap [websnap]="actualWebSnap"></app-web-snap>
   }
+  <app-web-snap></app-web-snap>
 </section>
 <router-outlet></router-outlet>

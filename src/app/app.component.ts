@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { WebSnapComponent } from './components/web-snap/web-snap.component';
 import { WebSnap } from '../models/web-snap.model';
-import { OldConditionnalComponent } from './components/old-conditionnal/old-conditionnal.component';
+import { OldConditionnalComponent } from "./components/old-conditionnal/old-conditionnal.component";
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    WebSnapComponent,
-    OldConditionnalComponent
-  ],
+    WebSnapComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
