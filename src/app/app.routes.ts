@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { WebSnapListComponent } from './components/web-snap-list/web-snap-list.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { WebSnapComponent } from './components/web-snap/web-snap.component';
+import { WebSnapListComponent } from '@/components/web-snap-list/web-snap-list.component';
+import { LandingPageComponent } from '@/components/landing-page/landing-page.component';
+import { WebSnapComponent } from '@/components/web-snap/web-snap.component';
 
 const appTitle = "WebSnapApp";
 
@@ -14,14 +14,12 @@ export const routes: Routes = [
   {
     path:"websnaps",
     title: `Liste des websnap - ${appTitle}`,
-    loadComponent: () => WebSnapListComponent,
-    children:[
-      {
-        path:"websnap/:id",
-        title:`WebSnap - ${appTitle}`,
-        loadComponent: () => WebSnapComponent
-      }
-    ]
+    loadComponent: () => WebSnapListComponent
+  },
+  {
+    path:"websnaps/websnap/:id",
+    title:`WebSnap - ${appTitle}`,
+    loadComponent: () => WebSnapComponent,
   },
   {
     path:"erreur/404",

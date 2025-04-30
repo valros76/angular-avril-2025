@@ -19,7 +19,8 @@ export class WebSnapComponent implements OnInit{
   websnap!: WebSnapI|undefined;
 
   ngOnInit(): void{
-    let id: number = this.route.snapshot.params["id"];
+    let id: number = Number(this.route.snapshot.params["id"]);
+
     if(!id){
       this.router.navigateByUrl("erreur/404");
     }
