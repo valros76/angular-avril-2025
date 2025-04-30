@@ -1,0 +1,97 @@
+.observables-preview-container{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  gap:.25rem;
+  background-color:#ede3ef;
+  color:#333;
+  margin-block:1.5rem;
+  margin-inline:auto;
+  padding:.75rem;
+  overflow:hidden;
+}
+
+.observables-preview-container-title{
+  width:100%;
+  display:block;
+  text-align:center;
+  margin-block:0 .5rem;
+  padding:.25rem;
+}
+
+.observables-flux-grid{
+  width:max-content;
+  display:grid;
+  grid-template-columns:repeat(7, 48px);
+  grid-auto-rows:minmax(48px, auto);
+  grid-auto-flow:row dense;
+  gap:8px 2px;
+  outline:3px solid #c6b4c9;
+  border-radius:4px;
+  margin-inline:auto;
+  padding:2px;
+}
+
+.observables-objects{
+  width:48px;
+  height:48px;
+  font-size:32px;
+  border:2px solid #b49cb8;
+  border-radius:4px;
+}
+
+.observables-objectA{
+  grid-column:1;
+  grid-row:1;
+}
+
+.observables-objectB{
+  grid-column:1;
+  grid-row:2;
+}
+
+.observables-preview-container-controls{
+  width:max-content;
+  max-width:calc(100% - 2rem);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin-block:.5rem;
+  margin-inline:auto;
+  padding:1rem;
+  border:2px solid #b49cb8;
+}
+
+.flux-btns{
+  font-size:1.1rem;
+  border:unset;
+  border-radius:8px;
+  padding:.5rem;
+}
+
+button.active {
+  background-color: #97900f;
+  color: #efe861;
+  outline: unset;
+}
+button.inactive {
+  background-color: #403f32;
+  color: #efe861;
+  outline: unset;
+}
+
+.flux-instructions{
+  width:100%;
+}
+
+.flux-instructions-text{
+  text-align:center;
+  font-size:1.25rem;
+  font-weight:700;
+  letter-spacing:.025rem;
+  margin:0;
+}
