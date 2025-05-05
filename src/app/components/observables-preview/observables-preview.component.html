@@ -1,40 +1,36 @@
+@for(observablesPreview of observablesPreview(); track idx; let idx = $index){
 <section class="observables-preview-container">
   <h2 class="observables-preview-container-title">
     {{observablesPreview.observableTitle}}
   </h2>
   <article>
-  <header class="observables-flux-grid">
-    <div 
-    class="observables-objects observables-objectA" 
-    [ngStyle]="observablesPreview.objectAStyle"
-    >
-      {{observablesPreview.objectAText}}
-    </div>
-    <div 
-    class="observables-objects observables-objectB" 
-    [ngStyle]="observablesPreview.objectBStyle"
-    >
-      {{observablesPreview.objectBText}}
-    </div>
-  </header>
-  <footer class="observables-preview-container-controls">
-    <button class="flux-btns fluxA" [ngClass]="{
+    <header class="observables-flux-grid">
+      <div class="observables-objects observables-objectA" [ngStyle]="observablesPreview.objectAStyle">
+        {{observablesPreview.objectAText}}
+      </div>
+      <div class="observables-objects observables-objectB" [ngStyle]="observablesPreview.objectBStyle">
+        {{observablesPreview.objectBText}}
+      </div>
+    </header>
+    <footer class="observables-preview-container-controls">
+      <button class="flux-btns fluxA" [ngClass]="{
         active: observablesPreview.btnFluxAState,
         inactive: !observablesPreview.btnFluxAState
         }">
-      {{observablesPreview.btnFluxAText}}
-    </button>
-    <button class="flux-btns fluxB" [ngClass]="{
+        {{observablesPreview.btnFluxAText}}
+      </button>
+      <button class="flux-btns fluxB" [ngClass]="{
       active: observablesPreview.btnFluxBState,
       inactive: !observablesPreview.btnFluxBState
       }">
-      {{observablesPreview.btnFluxBText}}
-    </button>
-    <aside class="flux-instructions">
-      <p class="flux-instructions-text" id="fluxInstructionsText">
-        {{observablesPreview.fluxInstructionsText}}
-      </p>
-    </aside>
-  </footer>
-</article>
+        {{observablesPreview.btnFluxBText}}
+      </button>
+      <aside class="flux-instructions">
+        <p class="flux-instructions-text" id="fluxInstructionsText">
+          {{observablesPreview.fluxInstructionsText}}
+        </p>
+      </aside>
+    </footer>
+  </article>
 </section>
+}
