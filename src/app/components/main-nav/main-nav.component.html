@@ -5,15 +5,21 @@
         Accueil
       </a>
     </li>
-    <li class="main-menu-items">
-      <a routerLink="/websnaps" class="main-menu-links">
-        Websnaps
-      </a>
-    </li>
-    <li class="main-menu-items">
-      <a routerLink="/erreur/404" class="main-menu-links">
-        Erreur 404
-      </a>
-    </li>
+    @if(isAuthenticated()){
+      <li class="main-menu-items">
+        <a routerLink="/websnaps" class="main-menu-links">
+          Websnaps
+        </a>
+      </li>
+      <li class="main-menu-items">
+        <a (click)="logout()" class="main-menu-links">Déconnexion</a>
+      </li>
+    }@else{
+      <li class="main-menu-items">
+        <a routerLink="/auth/login" class="main-menu-links">
+          Connexion
+        </a>
+      </li>
+    }
   </menu>
 </nav>

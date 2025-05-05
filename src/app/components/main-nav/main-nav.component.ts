@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AuthService } from '@/services/auth/auth.service';
+import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -10,5 +11,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './main-nav.component.css'
 })
 export class MainNavComponent {
+  private authService = inject(AuthService);
+  isAuthenticated = computed(() => this.authService.isAuthenticated());
+
+  logout(): void{
+    this.authService.logout();
+  }
 
 }
