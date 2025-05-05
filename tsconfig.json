@@ -23,7 +23,9 @@
       "@/services/*": ["app/services/*"],
       "@/models/*": ["app/models/*"],
       "@/interfaces/*": ["app/interfaces/*"],
-      "@/types/*": ["app/types/*"]
+      "@/types/*": ["app/types/*"],
+      "@/interceptors/*": ["app/interceptors/*"],
+      "@/guards/*": ["app/guards/*"]
     }
   },
   "angularCompilerOptions": {

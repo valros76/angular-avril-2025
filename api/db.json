@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    { "id": 1, "title": "Apprendre Angular 19", "completed": false },
+    { "id": 2, "title": "Utiliser les Signals", "completed": true },
+    { "id": 3, "title": "Mettre en place l'interceptor", "completed": false }
+  ],
+  "users": [
+    { "id": 1, "username": "test", "password": "password", "token": "fake-jwt-token-12345" }
+  ]
+}
