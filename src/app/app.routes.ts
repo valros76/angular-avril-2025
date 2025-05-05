@@ -5,6 +5,7 @@ import { WebSnapComponent } from '@/components/web-snap/web-snap.component';
 import { ErrorComponent } from './components/error/error.component';
 
 import { authRoutes } from './routes/auth.routes';
+import { AuthGuard } from './guards/auth/auth.guard';
 
 const appTitle = "WebSnapApp";
 
@@ -18,11 +19,13 @@ export const routes: Routes = [
   {
     path:"websnaps",
     title: `Liste des websnap - ${appTitle}`,
+    canActivate: [AuthGuard],
     loadComponent: () => import("@/components/web-snap-list/web-snap-list.component").then(m => m.WebSnapListComponent)
   },
   {
     path:"websnaps/websnap/:id",
     title:`WebSnap - ${appTitle}`,
+    canActivate: [AuthGuard],
     loadComponent: () => import("@/components/web-snap/web-snap.component").then(m => m.WebSnapComponent)
   },
   {

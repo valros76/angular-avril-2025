@@ -1,0 +1,45 @@
+<article>
+  <h2>
+    Se connecter
+  </h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="username" autocomplete="username" formControlName="username">
+    @if(
+      loginForm.get("username")?.invalid
+      && (
+        loginForm.get("username")?.dirty
+        || loginForm.get("username")?.touched
+        || loginForm.get("username")?.errors?.["required"]
+        || isSubmitted()
+      )
+    ){
+      <p>
+        Le nom d'utilisateur est requis.
+      </p>
+    }
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" autocomplete="current-password" formControlName="password">
+    @if(
+      loginForm.get("password")?.invalid
+      && (
+        loginForm.get("password")?.dirty
+        || loginForm.get("password")?.touched
+        || loginForm.get("password")?.errors?.["required"]
+        || isSubmitted()
+      )
+    ){
+      <p>
+        Le mot de passe est requis.
+      </p>
+    }
+
+    <button type="submit" [disabled]="!loginForm.valid">
+      Se connecter
+    </button>
+
+  </form>
+</article>
